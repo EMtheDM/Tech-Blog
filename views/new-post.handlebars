@@ -1,17 +1,12 @@
 <div class="card">
-    <h2 class="card-header">Create New Post</h2>
-    <form class="card-body" id="new-post-form">
-        <input type="hidden" name="post-id" value="{{post.id}}" />
-        <div>
-            <label class="form-label">Title: </label>
-            <input class="form-input" type="text" name="post-title" />
-        </div>
-        <div>
-            <label class="form-label">Content: </label>
-            <textarea class="form-textarea form-input" name="post-body" data-number="8"></textarea>
-        </div>
-
-        <button class="btn btn-primary">CREATE</button>
+    <h3 class="card-header">Create New Post</h3>
+    <form class="card-body new-post-form" id="new-post-form">
+        <label class="form-label" for="post-title">Title</label>
+        <input type="text" class="form-input" id="post-title" name="post-title" />
+        <label class="form-label" for="content">Content</label>
+        <input class="form-input" id="content" name="content" />
+        <button type="submit" class="btn">Create Post</button>
     </form>
 </div>
-<script src="/js/new/js"></script>
+
+<script src="/public/js/new.js"></script>
