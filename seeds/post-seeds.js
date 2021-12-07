@@ -1,28 +1,22 @@
 const { Post } = require('../models');
 
-const postData = [
-    {
-        postTitle: "Hello World",
-        postContent: "Welcome to Earth!",
-        userId: 1
+const postData = [{
+        title: 'I Need Caffeine',
+        content: 'I am so tired right now I need a shot of caffeine.',
+        user_id: 1
     },
     {
-        postTitle: "Javascript Thoughts",
-        postContent: "Javasript is the most fun language.",
-        userId: 2
+        title: 'I Need A Nap',
+        content: 'I am so tired right now I could fall asleep at my desk.',
+        user_id: 2
     },
     {
-        postTitle: "Bootcamps Rule",
-        postContent: "Bootcamps are a fun way to learn how to code.",
-        userId: 3
-    },
-    {
-        postTitle: "University of Denver",
-        postContent: "The University of Denver has a fantastic bootcamp for folks to join.",
-        userId: 4
+        title: 'I Need A Window',
+        content: 'I am so bored but I do not have a window to look through.',
+        user_id: 3
     }
 ];
 
-const seedPost = () => Post.bulkCreate(postData);
+const seedPosts = () => Post.bulkCreate(postData);
 
-module.exports = seedPost;
+module.exports = seedPosts;
