@@ -1,5 +1,5 @@
 <div class='menu-container'>
-    <div class='card text-white bg-info w-50 mx-auto border-secondary m-3'>
+    <div class='card w-50 mx-auto border-secondary m-3'>
         <div class='card-body'>
             <h5 class='card-title'>{{post.post_title}}</h5>
                 <p>Author: {{post.user.username}} Date: {{format_date post.createdAt}}</p>
@@ -8,7 +8,7 @@
     </div>
 
     {{#each post.comments as |post|}}
-    <div class='card text-white bg-secondary w-50 mx-auto border-secondary m-3'>
+    <div class='card text-white bg-secondary w-25 mx-auto border-secondary m-3'>
         <div class='card-body'>
             <h5 class='card-title'>{{user.username}} on {{format_date createdAt}}</h5>
             <p class='card-text'>{{comment_text}}</p>
@@ -16,8 +16,8 @@
     </div>
     {{/each}}
 
-    <div class='row mx-auto mt-3'>
-        <div class='col-md-5 ml-5 mr-5 card mx-auto'>
+    <div class='row w-15 mx-auto mt-6'>
+        <div class='col-md-5 ml-3 mr-3 card mx-auto'>
             <h3>Add New Comment:</h3>
             <form class='form new-comment-form'>
                 <div class='form-group'>
