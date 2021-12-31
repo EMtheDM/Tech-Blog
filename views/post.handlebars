@@ -2,16 +2,15 @@
     <div class='card text-white bg-info w-50 mx-auto border-secondary m-3'>
         <div class='card-body'>
             <h5 class='card-title'>{{post.post_title}}</h5>
-                <p>Author: {{loud post.user.username}} Date: {{format_date post.createdAt}}</p>
+                <p>Author: {{post.user.username}} Date: {{format_date post.createdAt}}</p>
             <p class='card-text'>{{post.post_content}}</p>
         </div>
     </div>
 
     {{#each post.comments as |post|}}
-    {{debug post}}
     <div class='card text-white bg-secondary w-50 mx-auto border-secondary m-3'>
         <div class='card-body'>
-            <h5 class='card-title'>{{loud user.username}} on {{format_date createdAt}}</h5>
+            <h5 class='card-title'>{{user.username}} on {{format_date createdAt}}</h5>
             <p class='card-text'>{{comment_text}}</p>
         </div>
     </div>

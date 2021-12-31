@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
         const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-        res.render('posts', {
+        res.render('all', {
             posts,
             username: req.session.username,
             user_id: req.session.user_id,
