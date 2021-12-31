@@ -1,0 +1,13 @@
+<div class='menu-container'>
+    {{#each posts as |post|}}
+    <div class='card text-white bg-info w-50 mx-auto border-secondary m-3'>
+        <div class='card-body'>
+            <h5 class='card-title'>{{post.post_title}}</h5>
+            <p>Author: {{loud post.user.username}} Date: {{format_date post.createdAt}}</p>
+            <p class='card-text'>{{post.post_content}}</p>
+            <a href='/{{id}}' class='btn btn-light'>Read More...</a>
+        </div>
+    </div>
+</div>
+
+{{/each}}
